@@ -1,0 +1,33 @@
+<div class="row col-lg-12">
+	<%= flash[:notice] %>
+    <div class="card mt5 mb-5 ">
+		<div class="card-body">
+			<h2 class="text-center">Listing Employees</h2>
+		</div>
+	</div>
+	<%= link_to "create employee new", new_path, class: "btn btn-primary btn-lg mb-4"  %>
+	<table class="table table-bordered">
+		<tread>
+			<tr>
+				<th>name</th>
+				<th>contact</th>
+				<th>address</th>
+				<th>Actions</th>
+			</tr>
+		</tread>
+		<tbody>
+			<% @employees.each do |employee| %>
+				<tr>
+					<td><%= employee.name %></td>
+					<td><%= employee.contact %></td>
+					<td><%= employee.address %></td>
+					<td>
+						<%= link_to "edit", edit_employee_path(employee), class: "btn btn-primary" %>
+						<%= link_to "show", employee_path(employee), class: "btn btn-primary" %>
+						<%= link_to "delete", employee_path(employee), class: "btn btn-danger", method: :delete, data: {confirm: "really delete"} %>
+					</td>
+				</tr> 
+			<% end %>
+		</tbody>
+	</table>
+</div>
