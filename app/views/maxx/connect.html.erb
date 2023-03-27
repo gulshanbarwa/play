@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Email Template</title>
+	<style type="text/css">
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: #f5f5f5;
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 16px;
+			line-height: 1.5;
+			color: #333333;
+		}
+
+		.container {
+			max-width: 600px;
+			margin: 0 auto;
+			padding: 20px;
+			background-color: #ffffff;
+		}
+
+		h1 {
+			margin-top: 0;
+			font-size: 24px;
+			font-weight: bold;
+			color: #333333;
+		}
+
+		p {
+			margin-bottom: 20px;
+		}
+
+		.bold {
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<p class="bold">From:</p>
+		<p><%= @mail %></p>
+		<p class="bold">To:</p>
+		<p><%= @email %></p>
+		<p class="bold">Subject:</p>
+		<p><%= @subject %></p>
+		<p class="bold">Message:</p>
+		<p><%= @message %></p>
+		<h1> <%= link_to "back to mail", maxx_path %> </h1>
+	</div>
+</body>
+</html>

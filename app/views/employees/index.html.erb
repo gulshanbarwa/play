@@ -6,6 +6,8 @@
 		</div>
 	</div>
 	<%= link_to "create employee new", new_path, class: "btn btn-primary btn-lg mb-4"  %>
+	<%= link_to "email", maxx_path, class: "btn btn-primary btn-lg mb-4"  %>
+	
 	<table class="table table-bordered">
 		<tread>
 			<tr>
@@ -24,7 +26,7 @@
 					<td>
 						<%= link_to "edit", edit_employee_path(employee), class: "btn btn-primary" %>
 						<%= link_to "show", employee_path(employee), class: "btn btn-primary" %>
-						<%= link_to "delete", employee_path(employee), class: "btn btn-danger", method: :delete, data: {confirm: "really delete"} %>
+						<%= link_to "delete", employee_path(employee), class: "btn btn-danger", method: :delete, data: {confirm: "really want to "} %>
 					</td>
 				</tr> 
 			<% end %>

@@ -3,10 +3,15 @@ Rails.application.routes.draw do
   # get "address" => "contact#address"
   # get 'play/call'
 
-  root "home#index"
+  root "employees#index"
   resources :employees
-  get "index" => "employees#index"
   post "create" => "employees#create"
   get "new" => "employees#new"
+
+
+  get "maxx" => "maxx#new"
+  post "maxx" => "maxx#create"
+  get "display" => "maxx#show"
+  get "detail" => "maxx#connect"
   
 end

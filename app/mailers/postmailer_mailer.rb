@@ -5,9 +5,10 @@ class PostmailerMailer < ApplicationMailer
   #
   #   en.postmailer_mailer.post_created.subject
   #
-  def post_created
-    @greeting = "Hi"
-
-    mail to: User.first.email
+   def post_created(message,email,subject)
+    @message = message
+    mail(to: email, from: "gulshanconnection@gmail.com", subject: subject) do |format|
+      format.html { render 'postmailer_mailer/post_created'}
+    end
   end
 end
